@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 生产环境版本，优化了尺寸和速度 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<div id="app"></div>
+	<script>
+		var Header={
+			template:'<h1>我是头部</h1>'
+		}
+		var Content={
+			template:` 
+				<div>内容</div>
+
+			`
+		}
+		var v=new Vue({
+			el:"#app",
+			components:{
+				'My-header':Header,
+				'My-content':Content
+			},
+			template:` 
+			<div>
+				<My-header></My-header>
+				<My-content></My-content>
+			</div>
+			`
+		})
+		console.log(v)
+	</script>
+	
+
+</body>
+</html>
